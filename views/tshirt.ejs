@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="item1"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Top</a>
 						<ul class="cute">
 							
-							<li class="subitem2"><a href="/board/tshirt">티셔츠 </a></li>
+							<li class="subitem2"><a href="/board/tshirt_menu">티셔츠 </a></li>
 							<li class="subitem3"><a href="#">셔츠</a></li>
 							<li class="subitem3"><a href="#">아우터 </a></li>
 						</ul>
@@ -157,6 +157,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
        </div>
 		  
 	   </div>
+	   <%
+	   for(var i=0; i<rows.length; i++)
+	   {
+		   var oneItem=rows[i];
+	   } 
+		%>
 	   <div class="col-md-9 single_right">
 	   	<div class="single_top">
 	       <div class="single_griepd">
@@ -164,20 +170,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul id="etalage">
 							<li>
 								<!-- <a href="optionallink.html"> -->
-									<img class="etalage_thumb_image" src="/images/s2.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="/images/s2.jpg" class="img-responsive" title="" />
+									<img class="etalage_thumb_image" src="/images/<%=oneItem.item_name%>.jpg" class="img-responsive" />
+									<img class="etalage_source_image" src="/images/<%=oneItem.item_name%>.jpg" class="img-responsive" title="" />
 								<!-- </a> -->
 							</li>
 						
 						</ul>
 						 <div class="clearfix"></div>
 				  </div>
+				 
 				  <div class="desc1 span_3_of_2">
-				  	<h1> shirt</h1>
+				  	<h1> <%=oneItem.item_name%> </h1>
 				<p class="availability">Availability: <span class="color">In stock</span></p>
 			    <div class="price_single">
 				
-				  <span class="actual">17,000원</span>
+				  <span class="actual"><%=oneItem.price%></span>
 				</div>
 		
 			    <div class="wish-list">
@@ -193,23 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li><a href="#">L</a></li>
 				</ul>
 				<div class="quantity_box">
-					<!-- <ul class="product-qty"> 구매 갯수 정하는건데 어뜩하지
-					   <span>Quantity:</span>
-					   <select>
-						 <option>1</option>
-						 <option>2</option>
-						 <option>3</option>
-						 <option>4</option>
-						 <option>5</option>
-						 <option>6</option>
-					   </select>
-				    </ul>
-				    <ul class="single_social">
-						<li><a href="#"><i class="fb1"> </i> </a></li>
-						<li><a href="#"><i class="tw1"> </i> </a></li>
-						<li><a href="#"><i class="g1"> </i> </a></li>
-						<li><a href="#"><i class="linked"> </i> </a></li>
-		   		    </ul> -->
+					
 		   		    <div class="clearfix"></div>
 	   		    </div>
 			    <a href="reservation.html" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</a>
@@ -222,7 +213,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				     <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 						  <ul class="resp-tabs-list">
 						  	  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>제품 설명</span></li>
-							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>추가 정보</span></li>
+							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>평점</span></li>
 							  <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>리뷰</span></li>
 							  <div class="clear"></div>
 						  </ul>
@@ -230,7 +221,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<div class="facts">
 									  <ul class="tab_list">
-									  	<li><a href="#">여긴가</a></li>
+									  	<li><a href="#"><%=oneItem.spec%></a></li>
 									  	
 									  </ul>
 							        </div>
@@ -238,7 +229,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							      <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 									<div class="facts">
 									  <ul class="tab_list">
-									    <li><a href="#">추가 정보</a></li>
+									    <li><a href="#">평점</a></li>
 									  
 									  </ul>
 							        </div>
@@ -254,97 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 </div>
 					      </div>
 			  </div>
-		<!-- <h3 class="single_head">Related Products</h3>
-	    <div class="related_products">
-	     <div class="col-md-4 top_grid1-box1 top_grid2-box2"><a href="single.html">
-	     	<div class="grid_1">
-	     	  <div class="b-link-stroke b-animate-go  thickbox">
-		        <img src="/images/p12.jpg" class="img-responsive" alt=""/> </div>
-	     	  <div class="grid_2">
-	     	  	<p>There are many variations of passages</p>
-	     	  	<ul class="grid_2-bottom">
-	     	  		<li class="grid_2-left"><p>$99<small>.33</small></p></li>
-	     	  		<li class="grid_2-right"><a href="single.html" title="Get It" class="btn btn-primary btn-normal btn-inline " target="_self">Get It</a></li>
-	     	  		<div class="clearfix"> </div>
-	     	  	</ul>
-	     	  </div>
-	     	</div>
-	     </a></div>
-	    <div class="col-md-4 top_grid1-box1"><a href="single.html">
-	     	<div class="grid_1">
-	     	  <div class="b-link-stroke b-animate-go  thickbox">
-		        <img src="/images/p13.jpg" class="img-responsive" alt=""/> </div>
-	     	  <div class="grid_2">
-	     	  	<p>There are many variations of passages</p>
-	     	  	<ul class="grid_2-bottom">
-	     	  		<li class="grid_2-left"><p>$99<small>.33</small></p></li>
-	     	  		<li class="grid_2-right"><a href="single.html" title="Get It" class="btn btn-primary btn-normal btn-inline " target="_self">Get It</a></li>
-	     	  		<div class="clearfix"> </div>
-	     	  	</ul>
-	     	  </div>
-	     	</div>
-	     </a></div>
-	     <div class="col-md-4 top_grid1-box1"><a href="single.html">
-	     	<div class="grid_1">
-	     	  <div class="b-link-stroke b-animate-go  thickbox">
-		        <img src="/images/p14.jpg" class="img-responsive" alt=""/> </div>
-	     	  <div class="grid_2">
-	     	  	<p>There are many variations of passages</p>
-	     	  	<ul class="grid_2-bottom">
-	     	  		<li class="grid_2-left"><p>$99<small>.33</small></p></li>
-	     	  		<li class="grid_2-right"><a href="single.html" title="Get It" class="btn btn-primary btn-normal btn-inline " target="_self">Get It</a></li>
-	     	  		<div class="clearfix"> </div>
-	     	  	</ul>
-	     	  </div>
-	     	</div>
-	     </a></div>
-	     <div class="clearfix"> </div>
-	    </div> -->
-	    <!-- <div class="top_grid2">
-	     <div class="col-md-4 top_grid1-box1 top_grid2-box2"><a href="single.html">
-	     	<div class="grid_1">
-	     	  <div class="b-link-stroke b-animate-go  thickbox">
-		        <img src="/images/p9.jpg" class="img-responsive" alt=""/> </div>
-	     	  <div class="grid_2">
-	     	  	<p>There are many variations of passages</p>
-	     	  	<ul class="grid_2-bottom">
-	     	  		<li class="grid_2-left"><p>$99<small>.33</small></p></li>
-	     	  		<li class="grid_2-right"><a href="single.html" title="Get It" class="btn btn-primary btn-normal btn-inline " target="_self">Get It</a></li>
-	     	  		<div class="clearfix"> </div>
-	     	  	</ul>
-	     	  </div>
-	     	</div>
-	    </a> </div>
-	    <div class="col-md-4 top_grid1-box1"><a href="single.html">
-	     	<div class="grid_1">
-	     	 <div class="b-link-stroke b-animate-go  thickbox">
-		        <img src="/images/p10.jpg" class="img-responsive" alt=""/> </div>
-	     	  <div class="grid_2">
-	     	  	<p>There are many variations of passages</p>
-	     	  	<ul class="grid_2-bottom">
-	     	  		<li class="grid_2-left"><p>$99<small>.33</small></p></li>
-	     	  		<li class="grid_2-right"><a href="single.html" title="Get It" class="btn btn-primary btn-normal btn-inline " target="_self">Get It</a></li>
-	     	  		<div class="clearfix"> </div>
-	     	  	</ul>
-	     	  </div>
-	     	</div>
-	     </a></div>
-	     <div class="col-md-4 top_grid1-box1"><a href="single.html">
-	     	<div class="grid_1">
-	     	  <div class="b-link-stroke b-animate-go  thickbox">
-		        <img src="/images/p11.jpg" class="img-responsive" alt=""/> </div>
-	     	  <div class="grid_2">
-	     	  	<p>There are many variations of passages</p>
-	     	  	<ul class="grid_2-bottom">
-	     	  		<li class="grid_2-left"><p>$99<small>.33</small></p></li>
-	     	  		<li class="grid_2-right"><a href="single.html" title="Get It" class="btn btn-primary btn-normal btn-inline " target="_self">Get It</a></li>
-	     	  		<div class="clearfix"> </div>
-	     	  	</ul>
-	     	  </div>
-	     	</div>
-	     </a></div>
-	     <div class="clearfix"> </div>
-	    </div> -->
+		
         </div>
       </div>
 	</div>
