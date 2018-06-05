@@ -1,21 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-
 var pool = mysql.createPool({
-  connectionLimit: 10,
+  connictionLimit: 10,
   host: 'localhost',
   user: 'root',
   database: 'test',
-  password: 'als213546'
+  password: 'dmlgjs'
 });
 
 
 
-router.get('/', function(req,res, next){
-
-  res.redirect('/board/index');
-});
 
 
 /* GET home page. */
@@ -34,35 +29,22 @@ router.get('/index', function(req, res, next) {
   });
   
  });
-// 물품 구매 페이지
-// router.get('/tshirt/:page',function(req,res,next){
 
-//   pool.getConnection(function (err,connection){
-// //use the connection
+router.get('/tshirt_menu/:item_name',function(req,res,next){
 
-// var sqlForSelectList="SELECT * FROM board";
-// connection.query(sqlForSelectList,function(err, rows){
+  var item_name=req.params.item_name;
 
-// if (err) console.error("err : "+ err);
-// console.log("rows: "+JSON.stringify(rows));
-
-// res.render('/tshirt',{title:'tshirt', rows: rows});
-// connection.release();
-
-// });
-
-//   });
-
-// });
-
-router.get('/tshirt',function(req,res,next){
   pool.getConnection(function(err, connection){
  
-    connection.query('SELECT * From board', function(err,rows){
+
+     var sql="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql,[item_name], function(err,rows){
       if(err) console.error("err: "+err);
-      console.log("rows : "+ JSON.stringify(rows));
+      console.log("rows : ",rows);
   
-      res.render('tshirt', { title: 'test',rows: rows });
+      res.render('tshirt', { title: 'test',rows: rows });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
       connection.release();
   
     });
@@ -72,7 +54,7 @@ router.get('/tshirt',function(req,res,next){
   router.get('/tshirt_menu',function(req,res,next){
     pool.getConnection(function(err, connection){
    
-      connection.query('SELECT * From board', function(err,rows){
+      connection.query('SELECT idx,item_name,item_type,price,color,spec From product', function(err,rows){
         if(err) console.error("err: "+err);
         console.log("rows : "+ JSON.stringify(rows));
     

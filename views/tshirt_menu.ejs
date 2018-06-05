@@ -36,6 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="/js/hover_pack.js"></script>
 </head>
 <body>
+
 <div class="header">
 	<div class="header_top">
 		<div class="container">
@@ -68,30 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	      </div><!-- end h_menu4 -->
      </div>
 </div>
-<div class="slider">
-	  <div class="callbacks_container">
-	      <ul class="rslides" id="slider">
-	        <li><img src="/images/banner1.jpg" class="img-responsive" alt=""/>
-	        <div class="banner_desc">
-				<h1>We Provide Worlds top fashion for less fashionpress.</h1>
-				<h2>FashionPress the name of the of hi class fashion Web FreePsd.</h2>
-			</div>
-	        </li>
-	        <li><img src="/images/banner2.jpg" class="img-responsive" alt=""/>
-	         <div class="banner_desc">
-				<h1>Duis autem vel eum iriure dolor in hendrerit.</h1>
-				<h2>Claritas est etiam processus dynamicus, qui sequitur .</h2>
-			 </div>
-	        </li>
-	        <li><img src="/images/banner3.jpg" class="img-responsive" alt=""/>
-	          <div class="banner_desc">
-				<h1>Ut wisi enim ad minim veniam, quis nostrud.</h1>
-				<h2>Mirum est notare quam littera gothica, quam nunc putamus.</h2>
-			  </div>
-	        </li>
-	      </ul>
-	  </div>
-</div>
+
 <div class="column_center">
   <div class="container">
 	<div class="search">
@@ -172,141 +150,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 				 <div class="clearfix"> </div>
 				</div> 
-				<div class="top_grid2">
-				  <div class="col-md-4 top_grid1-box1"><a href="/board/tshirt">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/s2.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				 <div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p4.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				 <div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p5.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				</a> </div>
-				 <div class="clearfix"> </div>
+				<%
+					var cnt = 0;
+					for(var i=0; i<rows.length; i++)
+					{
+						cnt++;
+						if(rows[i].item_type == "tshirt")
+						{
+							var product =rows[i];									
+						}
+				%>
+				<div class="top_grid2" >
+					<div class="col-md-4 top_grid1-box1"><a href="/board/tshirt_menu/<%=product.item_name%>" >
+						<div class="grid_1" >
+							<div class="b-link-stroke b-animate-go  thickbox">
+							<img src="/images/<%=product.item_name%>.jpg" class="img-responsive" alt="" /> </div>
+							<div class="grid_2">
+								<p><%=product.item_name%></p>
+								<ul class="grid_2-bottom">
+									<li class="grid_2-left"><p><%=product.price%>원</p></li>
+									<li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
+									<div class="clearfix"> </div>
+								</ul>
+							</div>
+						</div>
+					</a></div>				
 				</div> 
-				<div class="top_grid2">
-				 <div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					  <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p6.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				<div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p7.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				 <div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p8.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				 <div class="clearfix"> </div>
-				</div> 
+				<% if(cnt%3 == 0){ %>
+				<div class="clearfix"> </div>
+				<% } %>
+				<% } %>
+			
 				<!-- <h4 class="head"><span class="m_2">Popular</span> Products Now</h4> 하이라이트 부분-->
-				<div class="top_grid2">
-				 <div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p9.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				</a> </div>
-				<div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					  <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p10.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				 <div class="col-md-4 top_grid1-box1"><a href="single.html">
-					 <div class="grid_1">
-					   <div class="b-link-stroke b-animate-go  thickbox">
-						<img src="/images/p11.jpg" class="img-responsive" alt=""/> </div>
-					   <div class="grid_2">
-						   <p>There are many variations of passages</p>
-						   <ul class="grid_2-bottom">
-							   <li class="grid_2-left"><p>$99<small>.33</small></p></li>
-							   <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
-							   <div class="clearfix"> </div>
-						   </ul>
-					   </div>
-					 </div>
-				 </a></div>
-				 <div class="clearfix"> </div>
+				
+
 				</div> 
 			
 			   </div>
