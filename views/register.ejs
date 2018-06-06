@@ -22,91 +22,90 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
 	<script>
-            $(function(){
-                $("#btnJoin").click(
-                    function(){
-                        if($("#id").val() == "")
-                        {
-                            alert("아이디를 꼭 입력 하세요");
-                            $("#id").focus();
-                            return;
-                        }
-                        if($("#passwd").val() == "")
-                        {
-                            alert("비밀번호를 꼭 입력 하세요");
-                            $("#passwd").focus();
-                            return;
-						}
-						if($("#passwd").val() !== $("#conf_password").val())
-                        {
-                            alert("비밀번호를 꼭 입력 하세요");
-                            $("#password").focus();
-                            return;
-                        }
-                        if($("#name").val() =="")
-                        {
-                            alert("이름을 꼭 입력 하세요");
-                            $("#name").focus();
-                            return;
-                        }
-                        if($("#email").val() =="")
-                        {
-                            alert("이메일을 꼭 입력 하세요");
-                            $("#email").focus();
-                            return;
-                        }
-                        if($("#tel2").val() =="")
-                        {
-                            alert("전화번호 두번째 자리를 확인해 주세요");
-                            $("#tel2").focus();
-                            return;
-                        }
-                        if($("#tel3").val() =="")
-                        {
-                            alert("전화번호 세번째 자리를 확인해 주세요");
-                            $("#tel3").focus();
-                            return;
-                        }
+		$(function(){
+			$("#btnJoin").click(
+				function(){
+					if($("#id").val() == "")
+					{
+						alert("아이디를 꼭 입력 하세요");
+						$("#id").focus();
+						return;
+					}
+					if($("#passwd").val() == "")
+					{
+						alert("비밀번호를 꼭 입력 하세요");
+						$("#passwd").focus();
+						return;
+					}
+					if($("#passwd").val() !== $("#conf_passwd").val())
+					{
+						alert("비밀번호를 확인하세요");
+						return;
+					}
+					if($("#name").val() =="")
+					{
+						alert("이름을 꼭 입력 하세요");
+						$("#name").focus();
+						return;
+					}
+					if($("#email").val() =="")
+					{
+						alert("이메일을 꼭 입력 하세요");
+						$("#email").focus();
+						return;
+					}
+					if($("#tel2").val() =="")
+					{
+						alert("전화번호 두번째 자리를 확인해 주세요");
+						$("#tel2").focus();
+						return;
+					}
+					if($("#tel3").val() =="")
+					{
+						alert("전화번호 세번째 자리를 확인해 주세요");
+						$("#tel3").focus();
+						return;
+					}
 
-                        var tel = $("#tel1").val() + '-' + $("#tel2").val() + '-' + $("#tel3").val();
-                        $("#tel").val(tel);
+					var tel = $("#tel1").val() + '-' + $("#tel2").val() + '-' + $("#tel3").val();
+					$("#tel").val(tel);
 
-                        if($("#address").val() =="")
-                        {
-                            alert("주소를 꼭 입력 하세요");
-                            $("#address").focus();
-                            return;
-						}
-						if($("#gender").val() =="")
-                        {
-                            alert("성별을 꼭 입력 하세요");
-                            $("#gender").focus();
-                            return;
-                        }
-                        if($("#birth").val() =="")
-                        {
-                            alert("생일을 꼭 입력 하세요");
-                            $("#birth").focus();
-                            return;
-                        }
-                        if($("#birth").val().length !== 8)
-                        {
-                            alert("생일은 8글자로 입력해 주세요");
-                            $("#birth").focus();
-                            return;
-                        }
-                        if(isNaN($("#birth").val()))
-                        {
-                            alert("아이디를 꼭 입력 하세요");
-                            $("#birth").focus();
-                            return;
-                        }
-                        $("#register").submit();
-                        
-                    }
-                );
-            });
-        </script>
+					if($("#address").val() =="")
+					{
+						alert("주소를 꼭 입력 하세요");
+						$("#address").focus();
+						return;
+					}
+					if($("#gender").val() =="")
+					{
+						alert("성별을 꼭 입력 하세요");
+						$("#gender").focus();
+						return;
+					}
+					if($("#birth").val() =="")
+					{
+						alert("생일을 꼭 입력 하세요");
+						$("#birth").focus();
+						return;
+					}
+					if($("#birth").val().length !== 8)
+					{
+						alert("생일은 8글자로 입력해 주세요");
+						$("#birth").focus();
+						return;
+					}
+					if(isNaN($("#birth").val()))
+					{
+						alert("아이디를 꼭 입력 하세요");
+						$("#birth").focus();
+						return;
+					}
+					$("#register").submit();
+					
+				}
+			);
+		});
+	</script>
 </head>
 <body>
 <div class="header">
@@ -159,8 +158,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <div class="about">
-  <div class="container">
-      <div class="register">
+  	<div class="container">
+      	<div class="register">
 		  	<form id="register" action ="#" method="post"> 
 				<div class="register-top-grid">
 					<h3>LOGIN INFORMATION</h3>
@@ -238,11 +237,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 
 				<div class="clearfix"> </div>
-				<div class="login-right">
-					<input type = "submit"  id="btnJoin" value="submit">
+				<div>
+					<input class = "acount-btn" type = "button"  id="btnJoin" value="submit">
 					<div class="clearfix"> </div>
+				</div>
 			</form>
-			</div>
 		</div>
 	</div>
 </div>

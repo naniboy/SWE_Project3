@@ -80,10 +80,10 @@ router.get('/register',(req,res,next)=>{
 router.post('/register',function(req,res,next){
   console.log('req.body: '+JSON.stringify(req.body));
   var sql ;
+  
   pool.getConnection(function(err,connection){
     connection.query(sql,function(err,rows){
-      if(err) console.error("err: "+err);
-      res.render('register');
+      res.redirect('login');
       connection.release();
     });
   });
