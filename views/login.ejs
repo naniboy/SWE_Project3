@@ -21,6 +21,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--webfont-->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	
+		<script>
+			$(function(){
+				$("#btnJoin").click(
+					function(){
+						if($("#id").val() == "")
+						{
+							alert("아이디를 꼭 입력 하세요");
+							$("#id").focus();
+							return;
+						}
+						if($("#passwd").val() == "")
+						{
+							alert("비밀번호를 꼭 입력 하세요");
+							$("#passwd").focus();
+							return;
+						}
+						$("#login").submit();
+					}
+				);
+			});
+		</script>
+
 	</head>
 	
 	<body>
@@ -69,8 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clearfix"> </div>
 		</div>
 		</div>
-
-		<!------------------------------------------------ ↑여기까지 공통부분 -------------------------------------------------------->
+<!------------------------------------------------ ↑여기까지 공통부분 -------------------------------------------------------->
 
 		<div class="about">
 			<div class="container">
@@ -84,15 +106,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-md-6 login-right">
 						<h3>REGISTERED CUSTOMERS</h3>
 						<p>If you have an account with us, please log in.</p>
-						<form>
+						<form id = "login" action = "#" method = "POST">
 							<div>
-								<span>Email Address<label>*</label></span>
+								<span>ID<label>*</label></span>
 								<input type="text"> 
 							</div>
 
 							<div>
 								<span>Password<label>*</label></span>
-								<input type="text"> 
+								<input type="password"> 
 							</div>
 
 							<a class="forgot" href="#">Forgot Your Password?</a>
@@ -105,8 +127,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 
-
-		<!------------------------------------------------ ↓여기부터 공통부분-------------------------------------------------------->
+<!------------------------------------------------ ↓여기부터 공통부분-------------------------------------------------------->
 		<div class="footer_bg">
 		</div>
 
