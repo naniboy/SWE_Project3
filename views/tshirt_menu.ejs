@@ -57,12 +57,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
 					<li class="active"><a href="/board/index" data-hover="Home">Home</a></li>
-					<li><a href="about.html" data-hover="About Us">About Us</a></li>
-					<li><a href="careers.html" data-hover="Careers">Careers</a></li>
-					<li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
-					<li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
-					<li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
-					<li><a href="wishlist.html" data-hover="Wish List">Wish List</a></li>
 					<li><a href="salesreport.ejs" data-hover="salesreport">salesreport</a></li>
 				 </ul>
 				 <script type="text/javascript" src="/js/nav.js"></script>
@@ -90,20 +84,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	   	 <div class="sidebar">
 			<div class="menu_box">
 		    <h3 class="menu_head">Products Menu</h3>
-			  <ul class="menu">
+			<ul class="menu">
 				<li class="item1"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Top</a>
 					<ul class="cute">
 						
 						<li class="subitem2"><a href="/board/tshirt_menu">티셔츠 </a></li>
-						<li class="subitem3"><a href="#">셔츠</a></li>
-						<li class="subitem3"><a href="#">아우터 </a></li>
+						<li class="subitem3"><a href="/board/shirt_menu">셔츠</a></li>
+						<li class="subitem3"><a href="/board/outer_menu">아우터 </a></li>
 					</ul>
 				</li>
 				<li class="item2"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Pants</a>
 					<ul class="cute">
-						<li class="subitem1"><a href="#">청바지 </a></li>
-						<li class="subitem2"><a href="#">슬랙스 </a></li>
-						<li class="subitem3"><a href="#">면바지 </a></li>
+						<li class="subitem1"><a href="/board/bluejeon_menu">청바지 </a></li>
+						<li class="subitem2"><a href="/board/slacks_menu">슬랙스 </a></li>
+						<li class="subitem3"><a href="/board/cottenpants_menu">면바지 </a></li>
 					</ul>
 				</li>
 			
@@ -112,9 +106,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				<li class="item3"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Shoes</a>
 					<ul class="cute">
-						<li class="subitem1"><a href="#">스니커즈 </a></li>
-						<li class="subitem2"><a href="#">구두 </a></li>
-						<li class="subitem3"><a href="#">샌들</a></li>
+						<li class="subitem1"><a href="/board/sneak_menu">스니커즈 </a></li>
+						<li class="subitem2"><a href="/board/shoes_menu">구두 </a></li>
+						<li class="subitem3"><a href="/board/sandal_menu">샌들</a></li>
 					</ul>
 				</li>
 				
@@ -158,6 +152,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						if(rows[i].item_type == "tshirt")
 						{
 							var product =rows[i];									
+						}else{
+							continue;
 						}
 				%>
 				<div class="top_grid2" >
