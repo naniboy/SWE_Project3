@@ -70,6 +70,239 @@ router.get('/index', function(req, res, next) {
 
    });  
 });
+
+router.get('/shirt_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/outer_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/bluejeon_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/slacks_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/cottenpants_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/sneak_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/shoes_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
+router.get('/sandal_menu/:item_name',function(req,res,next){
+
+  var item_name=req.params.item_name;
+
+  pool.getConnection(function(err, connection){
+    var sql1="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
+    var sql2 = "select * from review where item_name=?"
+    var prod_info=[];
+    var prod_rev=[];
+// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+    connection.query(sql1, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_info=rows;
+      console.log("info : ",prod_info);
+    });
+
+    connection.query(sql2, item_name, function(err,rows){
+      if(err) console.error("err: "+err);
+      prod_rev=rows;
+      console.log("rev : ",prod_rev);
+      
+      res.render('tshirt', { title: 'test', rows: prod_info, db: prod_rev });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+
+      connection.release();
+    });
+
+   });  
+});
+
 router.get('/buy/:item_name',function(req,res,next){
 
   var item_name = req.params.item_name;
@@ -95,7 +328,7 @@ router.get('/buy/:item_name',function(req,res,next){
 router.get('/tshirt_menu',function(req,res,next){
     pool.getConnection(function(err, connection){
    
-      connection.query('SELECT idx,item_name,item_type,price,color,spec From product', function(err,rows){
+      connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
         if(err) console.error("err: "+err);
         console.log("rows : "+ JSON.stringify(rows));
     
@@ -105,7 +338,116 @@ router.get('/tshirt_menu',function(req,res,next){
       });
      });
 });
+router.get('/shirt_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('shirt_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
+router.get('/outer_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('outer_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
 
+router.get('/bluejeon_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('bluejeon_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
+
+router.get('/slacks_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('slacks_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
+
+router.get('/cottenpants_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('cottenpants_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
+
+router.get('/sneak_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('sneak_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
+
+router.get('/shoes_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('shoes_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
+
+router.get('/sandal_menu',function(req,res,next){
+  pool.getConnection(function(err, connection){
+ 
+    connection.query('SELECT idx,item_name,item_type,price,color,spec,sell From product', function(err,rows){
+      if(err) console.error("err: "+err);
+      console.log("rows : "+ JSON.stringify(rows));
+  
+      res.render('sandal_menu', { title: 'test',rows: rows });
+      connection.release();
+  
+    });
+   });
+});
 
 router.get('/login',function(req,res,next){
       res.render('login');
