@@ -50,7 +50,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			        });
 			    });
             </script>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	.checked {
+			color: orange;
+	}
+	</style>
 </head>
 <body>
 <div class="header">
@@ -106,8 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h3 class="menu_head">Products Menu</h3>
 				  <ul class="menu">
 					<li class="item1"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Top</a>
-						<ul class="cute">
-							
+						<ul class="cute">							
 							<li class="subitem2"><a href="/board/tshirt_menu">티셔츠 </a></li>
 							<li class="subitem3"><a href="#">셔츠</a></li>
 							<li class="subitem3"><a href="#">아우터 </a></li>
@@ -120,9 +124,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="subitem3"><a href="#">면바지 </a></li>
 						</ul>
 					</li>
-				
-	
-	
 	
 					<li class="item3"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Shoes</a>
 						<ul class="cute">
@@ -193,17 +194,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 	    <!-- <li class="compare"><a href="#">Add to Compare</a></li> -->
 				 	</ul>
 				 </div>
+			<form action="/board/buy/<%=oneItem.item_name%>" method="get">
 				<ul class="size">
 					<h3>Size</h3>
-					<li><a href="#">S</a></li>
-					<li><a href="#">M</a></li>
-					<li><a href="#">L</a></li>
-				</ul>
+					<select name="select_size">
+						<option value="small">S</option>
+						<option value="midium">M</option>
+						<option value="large">L</option>
+					</select>
+					
+				</ul>	
 				<div class="quantity_box">
+					
+					<div class="clearfix"></div>
+				</div>	
+				<button type="submit" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</button>	
+			</form>
+				
+				<!-- <div class="quantity_box">
 					
 		   		    <div class="clearfix"></div>
 	   		    </div>
-			    <a href="reservation.html" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</a>
+			    <a href="/board/buy/<%=oneItem.item_name%>" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</a> -->
 			</div>
 		    <div class="clearfix"> </div>
 				</div>
@@ -213,8 +225,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				     <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 						  <ul class="resp-tabs-list">
 						  	  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>제품 설명</span></li>
-							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>평점</span></li>
-							  <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>리뷰</span></li>
+							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>평점/리뷰</span></li>
+							  
 							  <div class="clear"></div>
 						  </ul>
 							<div class="resp-tabs-container">
@@ -229,19 +241,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							      <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 									<div class="facts">
 									  <ul class="tab_list">
-									    <li><a href="#">평점</a></li>
+									    <li><a href="#">
+
+												<div >
+											
+														%>
+													 <%
+														for(var i=0; i<db.length; i++)
+														{	 var data=db[i].star;
+													 %>
+														<div class="c-shop-item__details"> 
+															<h3 class="c-shop-item__title"><%=db[i].item_name%></h3> 
+															<p class="c-shop-item__description"> <%=db[i].content%> </p> 
+															
+															<%
+														
+															for(var k=0; k<data; k++)
+															{
+														 %>
+														 <span class="fa fa-star checked"></span>
+														 <%
+														}
+														%>
+															
+															
+														</div>
+		
+													
+														<%
+													}
+													%>
+													
+													</div>
+
+
+
+
+										</a></li>
 									  
 									  </ul>
 							        </div>
 							     </div>
-							      <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
-									<ul class="tab_list">
-									  	<li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</a></li>
-									  	<li><a href="#">augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigatione</a></li>
-									  	<li><a href="#">claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores leg</a></li>
-									  	<li><a href="#">Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</a></li>
-									  </ul>
-							     </div>
+							    
 							 </div>
 					      </div>
 			  </div>
