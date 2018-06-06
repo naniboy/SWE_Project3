@@ -1494,6 +1494,14 @@ i.mail{
 	font: 300 16px/16px Lato, sans-serif;
 }
 /*--register--*/
+.product h3 {
+	color:#df1f26;
+	font-size: 1.5em;
+	padding-bottom: 8px;
+	margin: 0;
+	font-weight:600;
+}
+
 .register-top-grid h3, .register-bottom-grid h3 {
 	color:#df1f26;
 	font-size: 1em;
@@ -1513,7 +1521,7 @@ i.mail{
 	display: block;
 	text-transform: uppercase;
 }
-.register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"], .register-top-grid select {
 	border: 1px solid #EEE;
 	outline-color:#FF5B36;
 	width: 96%;
