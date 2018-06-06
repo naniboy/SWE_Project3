@@ -25,320 +25,335 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" href="/stylesheets/etalage.css">
 <script src="/js/jquery.etalage.min.js"></script>
 <script>
-			jQuery(document).ready(function($){
+         jQuery(document).ready(function($){
 
-				$('#etalage').etalage({
-					thumb_image_width: 300,
-					thumb_image_height: 400,
-					source_image_width: 900,
-					source_image_height: 1200,
-					show_hint: true,
-					click_callback: function(image_anchor, instance_id){
-						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-					}
-				});
+            $('#etalage').etalage({
+               thumb_image_width: 300,
+               thumb_image_height: 400,
+               source_image_width: 900,
+               source_image_height: 1200,
+               show_hint: true,
+               click_callback: function(image_anchor, instance_id){
+                  alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+               }
+            });
 
-			});
-		</script>
+         });
+      </script>
 <script src="/js/easyResponsiveTabs.js" type="text/javascript"></script>
-		    <script type="text/javascript">
-			    $(document).ready(function () {
-			        $('#horizontalTab').easyResponsiveTabs({
-			            type: 'default', //Types: default, vertical, accordion
-			            width: 'auto', //auto or any width like 600px
-			            fit: true   // 100% fit in a container
-			        });
-			    });
+          <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#horizontalTab').easyResponsiveTabs({
+                     type: 'default', //Types: default, vertical, accordion
+                     width: 'auto', //auto or any width like 600px
+                     fit: true   // 100% fit in a container
+                 });
+             });
             </script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<style>
-	.checked {
-			color: orange;
-	}
-	</style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+   .checked {
+         color: orange;
+   }
+   </style>
 </head>
 <body>
 <div class="header">
-	<div class="header_top">
-		<div class="container">
-			<div class="logo">
-				<a href="/board/index"><img src="/images/logo.png" alt=""/></a>
-			</div>
-			<ul class="shopping_grid">
-			      <a href="#"><li>Join</li></a>
-			      <a href="/board/login"><li>Sign In</li></a>
-			      <a href="#"><li><span class="m_1">Shopping Bag</span>&nbsp;&nbsp;(0) &nbsp;<img src="/images/bag.png" alt=""/></li></a>
-			      <div class="clearfix"> </div>
-			</ul>
-		    <div class="clearfix"> </div>
-		</div>
-	</div>
-	<div class="h_menu4"><!-- start h_menu4 -->
-		<div class="container">
-				<a class="toggleMenu" href="#">Menu</a>
-				<ul class="nav">
-					<li class="active"><a href="/board/index" data-hover="Home">Home</a></li>
-					<li><a href="about.html" data-hover="About Us">About Us</a></li>
-					<li><a href="careers.html" data-hover="Careers">Careers</a></li>
-					<li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
-					<li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
-					<li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
-					<li><a href="wishlist.html" data-hover="Wish List">Wish List</a></li>
-				 </ul>
-				 <script type="text/javascript" src="/js/nav.js"></script>
-	      </div><!-- end h_menu4 -->
+   <div class="header_top">
+      <div class="container">
+         <div class="logo">
+            <a href="/board/index"><img src="/images/logo.png" alt=""/></a>
+         </div>
+         <ul class="shopping_grid">
+               <a href="#"><li>Join</li></a>
+               <a href="login.html"><li>Sign In</li></a>
+               <a href="#"><li><span class="m_1">Shopping Bag</span>&nbsp;&nbsp;(0) &nbsp;<img src="/images/bag.png" alt=""/></li></a>
+               <div class="clearfix"> </div>
+         </ul>
+          <div class="clearfix"> </div>
+      </div>
+   </div>
+   <div class="h_menu4"><!-- start h_menu4 -->
+      <div class="container">
+            <a class="toggleMenu" href="#">Menu</a>
+            <ul class="nav">
+               <li class="active"><a href="/board/index" data-hover="Home">Home</a></li>
+               <li><a href="about.html" data-hover="About Us">About Us</a></li>
+               <li><a href="careers.html" data-hover="Careers">Careers</a></li>
+               <li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
+               <li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
+               <li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
+               <li><a href="wishlist.html" data-hover="Wish List">Wish List</a></li>
+             </ul>
+             <script type="text/javascript" src="/js/nav.js"></script>
+         </div><!-- end h_menu4 -->
      </div>
 </div>
 <div class="column_center">
   <div class="container">
-	<div class="search">
-	  <div class="stay">Search Product</div>
-	  <div class="stay_right">
-		  <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-		  <input type="submit" value="">
-	  </div>
-	  <div class="clearfix"> </div>
-	</div>
+   <div class="search">
+     <div class="stay">Search Product</div>
+     <div class="stay_right">
+        <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+        <input type="submit" value="">
+     </div>
+     <div class="clearfix"> </div>
+   </div>
     <div class="clearfix"> </div>
   </div>
 </div>
 <div class="main">
   <div class="content_top">
-  	<div class="container">
-	   <div class="col-md-3 sidebar_box">
-	   	 <div class="sidebar">
-			<div class="menu_box">
-				<h3 class="menu_head">Products Menu</h3>
-				  <ul class="menu">
-					<li class="item1"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Top</a>
-						<ul class="cute">							
-							<li class="subitem2"><a href="/board/tshirt_menu">티셔츠 </a></li>
-							<li class="subitem3"><a href="#">셔츠</a></li>
-							<li class="subitem3"><a href="#">아우터 </a></li>
-						</ul>
-					</li>
-					<li class="item2"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Pants</a>
-						<ul class="cute">
-							<li class="subitem1"><a href="#">청바지 </a></li>
-							<li class="subitem2"><a href="#">슬랙스 </a></li>
-							<li class="subitem3"><a href="#">면바지 </a></li>
-						</ul>
-					</li>
-	
-					<li class="item3"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Shoes</a>
-						<ul class="cute">
-							<li class="subitem1"><a href="#">스니커즈 </a></li>
-							<li class="subitem2"><a href="#">구두 </a></li>
-							<li class="subitem3"><a href="#">샌들</a></li>
-						</ul>
-					</li>
-					
-				</ul>
-			</div>
-				<!--initiate accordion-->
-		<script type="text/javascript">
-			$(function() {            // 메뉴판 깔끔하게 해주는 코드
-			    var menu_ul = $('.menu > li > ul'),
-			           menu_a  = $('.menu > li > a');
-			    menu_ul.hide();
-			    menu_a.click(function(e) {
-			        e.preventDefault();
-			        if(!$(this).hasClass('active')) {
-			            menu_a.removeClass('active');
-			            menu_ul.filter(':visible').slideUp('normal');
-			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
-			        } else {
-			            $(this).removeClass('active');
-			            $(this).next().stop(true,true).slideUp('normal');
-			        }
-			    });
+     <div class="container">
+      <div class="col-md-3 sidebar_box">
+          <div class="sidebar">
+         <div class="menu_box">
+            <h3 class="menu_head">Products Menu</h3>
+              <ul class="menu">
+               <li class="item1"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Top</a>
+                  <ul class="cute">                     
+                     <li class="subitem2"><a href="/board/tshirt_menu">티셔츠 </a></li>
+                     <li class="subitem3"><a href="#">셔츠</a></li>
+                     <li class="subitem3"><a href="#">아우터 </a></li>
+                  </ul>
+               </li>
+               <li class="item2"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Pants</a>
+                  <ul class="cute">
+                     <li class="subitem1"><a href="#">청바지 </a></li>
+                     <li class="subitem2"><a href="#">슬랙스 </a></li>
+                     <li class="subitem3"><a href="#">면바지 </a></li>
+                  </ul>
+               </li>
+   
+               <li class="item3"><a href="#"><img class="arrow-img" src="/images/f_menu.png" alt=""/>Shoes</a>
+                  <ul class="cute">
+                     <li class="subitem1"><a href="#">스니커즈 </a></li>
+                     <li class="subitem2"><a href="#">구두 </a></li>
+                     <li class="subitem3"><a href="#">샌들</a></li>
+                  </ul>
+               </li>
+               
+            </ul>
+         </div>
+            <!--initiate accordion-->
+      <script type="text/javascript">
+         $(function() {            // 메뉴판 깔끔하게 해주는 코드
+             var menu_ul = $('.menu > li > ul'),
+                    menu_a  = $('.menu > li > a');
+             menu_ul.hide();
+             menu_a.click(function(e) {
+                 e.preventDefault();
+                 if(!$(this).hasClass('active')) {
+                     menu_a.removeClass('active');
+                     menu_ul.filter(':visible').slideUp('normal');
+                     $(this).addClass('active').next().stop(true,true).slideDown('normal');
+                 } else {
+                     $(this).removeClass('active');
+                     $(this).next().stop(true,true).slideUp('normal');
+                 }
+             });
 
-			});
-		</script>
+         });
+      </script>
        </div>
-		  
-	   </div>
-	   <%
-	   for(var i=0; i<rows.length; i++)
-	   {
-		   var oneItem=rows[i];
-	   } 
-		%>
-	   <div class="col-md-9 single_right">
-	   	<div class="single_top">
-	       <div class="single_griepd">
-				<div class="grid images_3_of_2">
-						<ul id="etalage">
-							<li>
-								<!-- <a href="optionallink.html"> -->
-									<img class="etalage_thumb_image" src="/images/<%=oneItem.item_name%>.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="/images/<%=oneItem.item_name%>.jpg" class="img-responsive" title="" />
-								<!-- </a> -->
-							</li>
-						
-						</ul>
-						 <div class="clearfix"></div>
-				  </div>
-				 
-				  <div class="desc1 span_3_of_2">
-				  	<h1> <%=oneItem.item_name%> </h1>
-				<p class="availability">Availability: <span class="color">In stock</span></p>
-			    <div class="price_single">
-				
-				  <span class="actual"><%=oneItem.price%></span>
-				</div>
-		
-			    <div class="wish-list">
-				 	<ul>
-				 		<li class="wish"><a href="#">Add to wishlist</a></li>
-				 	    <!-- <li class="compare"><a href="#">Add to Compare</a></li> -->
-				 	</ul>
-				 </div>
-			<form action="/board/buy/<%=oneItem.item_name%>" method="get">
-				<ul class="size">
-					<h3>Size</h3>
-					<select name="select_size">
-						<option value="small">S</option>
-						<option value="midium">M</option>
-						<option value="large">L</option>
-					</select>
-					
-				</ul>	
-				<div class="quantity_box">
-					
-					<div class="clearfix"></div>
-				</div>	
-				<button type="submit" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</button>	
-			</form>
-				
-				<!-- <div class="quantity_box">
-					
-		   		    <div class="clearfix"></div>
-	   		    </div>
-			    <a href="/board/buy/<%=oneItem.item_name%>" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</a> -->
-			</div>
-		    <div class="clearfix"> </div>
-				</div>
-          	    <div class="clearfix"></div>
+        
+      </div>
+      <%
+      for(var i=0; i<rows.length; i++)
+      {
+         var oneItem=rows[i];
+      } 
+      %>
+      <div class="col-md-9 single_right">
+         <div class="single_top">
+          <div class="single_griepd">
+            <div class="grid images_3_of_2">
+                  <ul id="etalage">
+                     <li>
+                        <!-- <a href="optionallink.html"> -->
+                           <img class="etalage_thumb_image" src="/images/<%=oneItem.item_name%>.jpg" class="img-responsive" />
+                           <img class="etalage_source_image" src="/images/<%=oneItem.item_name%>.jpg" class="img-responsive" title="" />
+                        <!-- </a> -->
+                     </li>
+                  
+                  </ul>
+                   <div class="clearfix"></div>
+              </div>
+             
+              <div class="desc1 span_3_of_2">
+                 <h1> <%=oneItem.item_name%> </h1>
+            <p class="availability">Availability: <span class="color">In stock</span></p>
+             <div class="price_single">
+            
+              <span class="actual"><%=oneItem.price%></span>
+            </div>
+      
+             <div class="wish-list">
+                <ul>
+                   <li class="wish"><a href="#">Add to wishlist</a></li>
+                    <!-- <li class="compare"><a href="#">Add to Compare</a></li> -->
+                </ul>
+             </div>
+         <form action="/board/buy/<%=oneItem.item_name%>" method="get">
+            <ul class="size">
+               <h3>Size</h3>
+               <select name="select_size">
+                  <option value="small">S</option>
+                  <option value="midium">M</option>
+                  <option value="large">L</option>
+               </select>
+               
+            </ul>   
+            <div class="quantity_box">
+               
+               <div class="clearfix"></div>
+            </div>   
+            <button type="submit" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</button>   
+         </form>
+            
+            <!-- <div class="quantity_box">
+               
+                   <div class="clearfix"></div>
+                </div>
+             <a href="/board/buy/<%=oneItem.item_name%>" title="Online Reservation" class="btn bt1 btn-primary btn-normal btn-inline " target="_self">Buy</a> -->
+         </div>
+          <div class="clearfix"> </div>
+            </div>
+                 <div class="clearfix"></div>
           </div>
           <div class="sap_tabs">
-				     <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-						  <ul class="resp-tabs-list">
-						  	  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>제품 설명</span></li>
-							  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>평점/리뷰</span></li>
-							  
-							  <div class="clear"></div>
-						  </ul>
-							<div class="resp-tabs-container">
-							    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-									<div class="facts">
-									  <ul class="tab_list">
-									  	<li><a href="#"><%=oneItem.spec%></a></li>
-									  	
-									  </ul>
-							        </div>
-							     </div>
-							      <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
-									<div class="facts">
-									  <ul class="tab_list">
-									    <li><a href="#">
+                 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                    <ul class="resp-tabs-list">
+                         <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>제품 설명</span></li>
+                       <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>평점/리뷰</span></li>
+                       
+                       <div class="clear"></div>
+                    </ul>
+                     <div class="resp-tabs-container">
+                         <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+                           <div class="facts">
+                             <ul class="tab_list">
+                                <li><a href="#"><%=oneItem.spec%></a></li>
+                                
+                             </ul>
+                             </div>
+                          </div>
+                           <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+                           <div class="facts">
+                             <ul class="tab_list">
+                               <li>
 
-												<div >
-											
-														%>
-													 <%
-														for(var i=0; i<db.length; i++)
-														{	 var data=db[i].star;
-													 %>
-														<div class="c-shop-item__details"> 
-															<h3 class="c-shop-item__title"><%=db[i].item_name%></h3> 
-															<p class="c-shop-item__description"> <%=db[i].content%> </p> 
-															
-															<%
-														
-															for(var k=0; k<data; k++)
-															{
-														 %>
-														 <span class="fa fa-star checked"></span>
-														 <%
-														}
-														%>
-															
-															
-														</div>
-		
-													
-														<%
-													}
-													%>
-													
-													</div>
+                                    <div>
+                                 
+                                          
+                                        <%
+                                          for(var i=0; i<db.length; i++)
+                                          {    var data=db[i].star;
+                                        %>
+                                          <div class="c-shop-item__details"> 
+                                             <h3 class="c-shop-item__title"><%=db[i].user_name%></h3> 
+                                             <p class="c-shop-item__description"> <%=db[i].content%> </p> 
+                                             
+                                             <%
+                                          
+                                             for(var k=0; k<data; k++)
+                                             {
+                                           %>
+                                           <span class="fa fa-star checked"></span>
+                                           <%
+                                          }
+                                          %>
+                                             
+                                             
+                                          </div>
+      
+                                       
+                                          <%
+                                       }
+                                       %>
+
+                                       <br>
+                                       <h2>리뷰 남기기</h2>
+                                       
+                                    <form id="review" action="#" method="post">
+                                        <select name="cnt_star" id="cnt_star" style="height:28px; margin-bottom: 5px">
+                                           <option value="1" name="cnt_star" id="cnt_star">☆</option>
+                                           <option value="2" name="cnt_star" id="cnt_star">☆☆</option>
+                                           <option value="3" name="cnt_star" id="cnt_star">☆☆☆</option>
+                                           <option value="4" name="cnt_star" id="cnt_star">☆☆☆☆</option>
+                                           <option value="5" name="cnt_star" id="cnt_star">☆☆☆☆☆</option>
+                                        </select><br>
+                                       <input type="text" value="cmt" name="cmt" id="cmt" style="width:80%; height:100px">
+                                       <a href="#"><button type="submit" style="padding: 5px; margin: 3px; width:15%; height:100px"><font size="5px">글쓰기</font></button>
+                                    </form>
+                                </a>
+                                       </div>
 
 
 
 
-										</a></li>
-									  
-									  </ul>
-							        </div>
-							     </div>
-							    
-							 </div>
-					      </div>
-			  </div>
-		
+                              </a></li>
+                             
+                             </ul>
+                             </div>
+                          </div>
+                         
+                      </div>
+                     </div>
+           </div>
+      
         </div>
       </div>
-	</div>
+   </div>
 </div>
 <div class="footer_bg">
 </div>
 <div class="footer">
-	<div class="container">
-		<div class="col-md-3 f_grid1">
-			<h3>About</h3>
-			<a href="#"><img src="/images/logo.png" alt=""/></a>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-		</div>
-		<div class="col-md-3 f_grid1 f_grid2">
-			<h3>Follow Us</h3>
-			<ul class="social">
-				<li><a href=""> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
-			    <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
-				<li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
-				<li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
-			</ul>
-		</div>
-		<div class="col-md-6 f_grid3">
-			<h3>Contact Info</h3>
-			<ul class="list">
-				<li><p>Phone : 1.800.254.5487</p></li>
-				<li><p>Fax : 1.800.254.2548</p></li>
-				<li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
-			</ul>
-			<ul class="list1">
-				<li><p>Aliquam augue a bibendum ipsum diam, semper porttitor libero elit egestas gravida, ut quam, nunc taciti</p></li>
-			</ul>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
+   <div class="container">
+      <div class="col-md-3 f_grid1">
+         <h3>About</h3>
+         <a href="#"><img src="/images/logo.png" alt=""/></a>
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+      </div>
+      <div class="col-md-3 f_grid1 f_grid2">
+         <h3>Follow Us</h3>
+         <ul class="social">
+            <li><a href=""> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+             <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+            <li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+            <li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+         </ul>
+      </div>
+      <div class="col-md-6 f_grid3">
+         <h3>Contact Info</h3>
+         <ul class="list">
+            <li><p>Phone : 1.800.254.5487</p></li>
+            <li><p>Fax : 1.800.254.2548</p></li>
+            <li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
+         </ul>
+         <ul class="list1">
+            <li><p>Aliquam augue a bibendum ipsum diam, semper porttitor libero elit egestas gravida, ut quam, nunc taciti</p></li>
+         </ul>
+         <div class="clearfix"> </div>
+      </div>
+   </div>
 </div>
 <div class="footer_bottom">
-       	<div class="container">
-       		<div class="cssmenu">
-				<ul>
-					<li class="active"><a href="login.html">Privacy Policy</a></li> .
-					<li><a href="checkout.html">Terms of Service</a></li> .
-					<li><a href="checkout.html">Creative Rights Policy</a></li> .
-					<li><a href="login.html">Contact Us</a></li> .
-					<li><a href="register.html">Support & FAQ</a></li>
-				</ul>
-			</div>
-			<div class="copy">
-			    <p>&copy;  2015 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
-		    </div>
-		    <div class="clearfix"> </div>
-       	</div>
+          <div class="container">
+             <div class="cssmenu">
+            <ul>
+               <li class="active"><a href="login.html">Privacy Policy</a></li> .
+               <li><a href="checkout.html">Terms of Service</a></li> .
+               <li><a href="checkout.html">Creative Rights Policy</a></li> .
+               <li><a href="login.html">Contact Us</a></li> .
+               <li><a href="register.html">Support & FAQ</a></li>
+            </ul>
+         </div>
+         <div class="copy">
+             <p>&copy;  2015 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+          </div>
+          <div class="clearfix"> </div>
+          </div>
 </div>
 </body>
 </html>

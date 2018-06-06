@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<ul class="shopping_grid">
 			      <a href="#"><li>Join</li></a>
-			      <a href="/board/login"><li>Sign In</li></a>
+			      <a href="login.html"><li>Sign In</li></a>
 			      <a href="#"><li><span class="m_1">Shopping Bag</span>&nbsp;&nbsp;(0) &nbsp;<img src="/images/bag.png" alt=""/></li></a>
 			      <div class="clearfix"> </div>
 			</ul>
@@ -166,42 +166,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		 
 			
 	   </div> 
-	   <div class="col-md-9 content_right">
-	   	<div class="top_grid1">
-	     <div class="col-md-4 box_2">
-	     
-	     </a></div>
-	    
-	     
-	    </div> 
-	    <div class="top_grid2">
-	    
-	     
-	 
-	    </div> 
-	    <div class="top_grid2">
-	    
-	  
-	   
-	    
-	    </div> 
-	   
-	    <div class="top_grid2">
-	  
-	 
-	 
-	     <div class="clearfix"> </div>
-	    </div> 
-	    <div class="top_grid2">
-	  
-	
-	  
-	     <div class="clearfix"> </div>
-	    </div> 
-       </div>
-	  </div>  	    
-	</div>
-</div>
+
+
+			<div class="col-md-9 content_right">
+					<div class="top_grid1">
+				  <div class="col-md-4 box_2">
+				 
+				  </div>
+			 
+				  <div class="clearfix"> </div>
+				 </div> 
+				 <h3 style="margin:15px; font: fantasy;"><font color="red">Our TOP 10!!!</h3>
+				 <%
+					 var cnt = 0;
+					 for(var i=0; i<10; i++)
+					 {
+						 cnt++;
+						 if(rows[i].item_type == "tshirt")
+						 {
+							 var product =rows[i];									
+						 }
+				 %>
+				 <div class="top_grid2" >
+					 <div class="col-md-4 top_grid1-box1"><a href="/board/<%=product.item_type%>_menu/<%=product.item_name%>" >
+						 <div class="grid_1" >
+							 <div class="b-link-stroke b-animate-go  thickbox">
+							 <img src="/images/<%=product.item_name%>.jpg" class="img-responsive" alt="" style="height:300px"/> </div>
+							 <div class="grid_2">
+								 <p><%=product.item_name%>　　　　　　판매량 : <%=product.sell%></p>
+								 <ul class="grid_2-bottom">
+									 <li class="grid_2-left"><p><%=product.price%>원</p></li>
+									 <li class="grid_2-right"><div class="btn btn-primary btn-normal btn-inline " target="_self" title="Get It">Get It</div></li>
+									 <div class="clearfix"> </div>
+								 </ul>
+							 </div>
+						 </div>
+					 </a></div>				
+				 </div> 
+				 <% if(cnt%3 == 0){ %>
+				 <div class="clearfix"> </div>
+				 <% } %>
+				 <% } %>
+			 
+				 <!-- <h4 class="head"><span class="m_2">Popular</span> Products Now</h4> 하이라이트 부분-->
+				 
+ 
+				 </div> 
+			 
+				</div>
+			   </div>  	    
+			 </div>
+		 </div>
+
+
+
+
+
 <div class="footer_bg">
 </div>
 <div class="footer">
