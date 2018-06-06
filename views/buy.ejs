@@ -1,0 +1,249 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Fashionpress an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Single :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Fashionpress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="/stylesheets/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/js/hover_pack.js"></script>
+<link rel="stylesheet" href="/stylesheets/etalage.css">
+<script src="/js/jquery.etalage.min.js"></script>
+<script>
+			jQuery(document).ready(function($){
+
+				$('#etalage').etalage({
+					thumb_image_width: 300,
+					thumb_image_height: 400,
+					source_image_width: 900,
+					source_image_height: 1200,
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});
+
+			});
+		</script>
+<script src="/js/easyResponsiveTabs.js" type="text/javascript"></script>
+		    <script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+            </script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="header_top">
+            <div class="container">
+                <div class="logo">
+                    <a href="/board/index"><img src="/images/logo.png" alt=""/></a>
+                </div>
+                <ul class="shopping_grid">
+                      <a href="#"><li>Join</li></a>
+                      <a href="login.html"><li>Sign In</li></a>
+                      <a href="#"><li><span class="m_1">Shopping Bag</span>&nbsp;&nbsp;(0) &nbsp;<img src="images/bag.png" alt=""/></li></a>
+                      <div class="clearfix"> </div>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="h_menu4"><!-- start h_menu4 -->
+            <div class="container">
+                    <a class="toggleMenu" href="#">Menu</a>
+                    <ul class="nav">
+                        <li><a href="index.html" data-hover="Home">Home</a></li>
+                        <li><a href="about.html" data-hover="About Us">About Us</a></li>
+                        <li><a href="careers.html" data-hover="Careers">Careers</a></li>
+                        <li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
+                        <li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
+                        <li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
+                        <li class="active"><a href="/board/buy" data-hover="Wish List">Wish List</a></li>
+                     </ul>
+                     <script type="text/javascript" src="js/nav.js"></script>
+              </div><!-- end h_menu4 -->
+         </div>
+    </div>
+    <div class="column_center">
+      <div class="container">
+        <div class="search">
+          <div class="stay">Search Product</div>
+          <div class="stay_right">
+              <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+              <input type="submit" value="">
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+
+
+<div class="about">
+    <div class="container">
+    <div class="product">
+            <h3>상품 정보</h3><br>
+            <table style="border:1px; width: 96%; font-size: 1em; text-align:center; padding:50px" summary="">
+            <thead >
+            <tr >
+                <td style="padding: 20px"><strong>이미지</strong></td>
+                <td style="padding: 20px" ><strong>상품정보</strong></td>
+                <td style="padding: 20px"><strong>금액</strong></td>
+                <td style="padding: 20px"><strong>수량</strong></td>
+                <td style="padding: 20px"><strong>배송비</strong></td>
+                <td style="padding: 20px"><strong>합계</strong></td>
+            </tr>
+            
+            </thead>
+            
+            
+            <tbody class="xans-element- xans-order xans-order-normallist">
+            <tr class="xans-record-">
+                <td class="thumb"><a href="/board/<%=rows[0].item_type%>_menu/<%=rows[0].item_name%>"><img src="/images/<%=rows[0].item_name%>.jpg" alt="" style="width:200px; height:200px;"/></a></td>
+                <td class="product">
+                    <a href="/board/<%=rows[0].item_type%>_menu/<%=rows[0].item_name%>"><strong><%=rows[0].item_name%></strong></a>
+                    <div class="option ">[<%=rows[0].color%> / <%=select_size%>]</div>
+                </td>
+                <td class="don"><%=rows[0].price%>원</td>
+                <td class="quantity">1</td>
+                <td class="delivery">2500원</td>
+                <td class="total"><strong><%=rows[0].price + 2500%>원</strong><div class="displaynone"></div></td>
+            </tr>
+
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+    <div class="about">
+        <div class="container">
+            <div class="register">
+                <form> 
+                <div class="register-top-grid">
+                    <h3>주문자 정보</h3>
+                    <div>
+                        <span>주문자 성함<label>*</label></span>
+                        <input type="text"> 
+                    </div>
+                    <div>
+                        <span>이메일<label>*</label></span>
+                        <input type="text"> 
+                    </div>
+                    
+                    <div>
+                        <span>연락처<label>*</label></span>
+                        <select name="first_num" style="width: 29%; padding: 0.5em; height: 40px;">
+                            <option value="one_zero">010</option>
+                            <option value="one_nine">019</option>
+                            <option value="one_six">016</option></select> - <input type="text" style="width: 29%;"> - <input type="text" style="width: 29%;">
+                    </div>
+
+                    <div>
+                        <span>요구사항<label>　</label></span>
+                        <select name="select_size" style="border:1px solid #EEE; width: 96%;
+                        font-size: 1em;
+                        padding: 0.5em; height: 41px;">
+                            <option value="small">부재시 경비실에 맡겨주세요.</option>
+                            <option value="midium">부재시 옆집에 맡겨주세요.</option>
+                            <option value="large">올때 메로나</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <span>주소<label>*</label></span>
+                        <input type="text"> 
+                    </div>
+
+                    <div class="clearfix"> </div>
+                        <a class="news-letter" href="#">
+                        </a>
+                    </div>
+                    
+                </form>
+                <div class="clearfix"> </div>
+                <div class="register-but">
+                    <form action="/board/sell/<%=rows[0].item_name%>" method="get" >
+                        
+                        <input type="submit" value="결제하기" onclick="alert('결제됐쥬?')" />
+                        
+                        <div class="clearfix"> </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_bg">
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-3 f_grid1">
+                <h3>About</h3>
+                <a href="#"><img src="images/logo.png" alt=""/></a>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <div class="col-md-3 f_grid1 f_grid2">
+                <h3>Follow Us</h3>
+                <ul class="social">
+                    <li><a href=""> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+                    <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+                    <li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+                    <li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 f_grid3">
+                <h3>Contact Info</h3>
+                <ul class="list">
+                    <li><p>Phone : 1.800.254.5487</p></li>
+                    <li><p>Fax : 1.800.254.2548</p></li>
+                    <li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
+                </ul>
+                <ul class="list1">
+                    <li><p>Aliquam augue a bibendum ipsum diam, semper porttitor libero elit egestas gravida, ut quam, nunc taciti</p></li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+               <div class="container">
+                   <div class="cssmenu">
+                    <ul>
+                        <li class="active"><a href="login.html">Privacy Policy</a></li> .
+                        <li><a href="checkout.html">Terms of Service</a></li> .
+                        <li><a href="checkout.html">Creative Rights Policy</a></li> .
+                        <li><a href="login.html">Contact Us</a></li> .
+                        <li><a href="register.html">Support & FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    <p>&copy;  2015 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+                </div>
+                <div class="clearfix"> </div>
+               </div>
+    </div>
+</body>
+</html>
