@@ -24,7 +24,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	
 		<script>
 			$(function(){
-				$("#btnJoin").click(
+				$("#sign_in").click(
 					function(){
 						if($("#id").val() == "")
 						{
@@ -109,16 +109,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<form id = "login" action = "#" method = "POST">
 							<div>
 								<span>ID<label>*</label></span>
-								<input type="text"> 
+								<input type = "text" name = "id" id ="id" size = "12" maxLength ="12">
 							</div>
 
-							<div>
+							<div class ="register-top-grid">
 								<span>Password<label>*</label></span>
-								<input type="password"> 
-							</div>
-
+								<input type="password" name ="passwd" id ="passwd" size ="12" maxLength ="12">
+							</div>	
+		
+							<div type='hidden'></div>
+		
 							<a class="forgot" href="#">Forgot Your Password?</a>
-							<input type="button" value="Login">
+							<input class ='acount-btn' type ="button" id = "sign_in" value="Login">
 						</form>
 					</div>	
 

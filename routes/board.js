@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+var session = require('express-session');
 var pool = mysql.createPool({
   connictionLimit: 10,
   host: 'localhost',
@@ -8,6 +9,13 @@ var pool = mysql.createPool({
   database: 'test',
   password: 'als213546'
 });
+
+
+router.use(session({
+  secret:'asdfsafwqegvfsdnh3425325#@#',
+  resave:false,
+  saveUninitialized: true
+}));
 
 router.get('/sell/:item_name', function(req, res, next) {
   var item_name = req.params.item_name;
@@ -112,10 +120,33 @@ router.get('/login',function(req,res,next){
 });
 
 router.post('/login', function(req,res,next){
-    
+  
+  var id = req.body.id;
+  var pwd = req.body.passwd;
+
+  
+  var sql = "select * from info_person where id = ?";
+  
+  pool.getConnection(function(err,connection){
+      connection.query(sql,id,function(err,rows){
+          if(err) console.error('err: '+err);
+          
+          //console.log(pwd);
+
+          if(rows.length!==0 && pwd === rows[0].pw){
+            
+            res.redirect('index');
+            req.session.displayName = rows[0].id;
+            connection.release(); 
+          }
+
+          else{
+          res.render('login',{msg:'잘못된 정보 입니다.' });
+          connection.release();
+          }
+      });
+    });
 });
-
-
 
 
 router.get('/register',(req,res,next)=>{
