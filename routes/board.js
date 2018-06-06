@@ -6,7 +6,7 @@ var pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   database: 'test',
-  password: 'dmlgjs'
+  password: 'als213546'
 });
 
 
@@ -38,7 +38,7 @@ router.get('/tshirt_menu/:item_name',function(req,res,next){
  
 
      var sql="select idx,item_name,item_type,price,color,spec from product where item_name=? ";
-// list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+ // list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
     connection.query(sql,[item_name], function(err,rows){
       if(err) console.error("err: "+err);
       console.log("rows : ",rows);
@@ -51,7 +51,7 @@ router.get('/tshirt_menu/:item_name',function(req,res,next){
    });
   });
 
-  router.get('/tshirt_menu',function(req,res,next){
+router.get('/tshirt_menu',function(req,res,next){
     pool.getConnection(function(err, connection){
    
       connection.query('SELECT idx,item_name,item_type,price,color,spec From product', function(err,rows){
@@ -63,5 +63,32 @@ router.get('/tshirt_menu/:item_name',function(req,res,next){
     
       });
      });
+});
+
+
+router.get('/login',function(req,res,next){
+      res.render('login');
+});
+
+
+
+
+router.get('/register',(req,res,next)=>{
+  res.render('register');
+});
+
+router.post('/register',function(req,res,next){
+  console.log('req.body: '+JSON.stringify(req.body));
+  var sql ;
+  pool.getConnection(function(err,connection){
+    connection.query(sql,function(err,rows){
+      if(err) console.error("err: "+err);
+      res.render('register');
+      connection.release();
     });
+  });
+
+});
+
+
 module.exports = router;

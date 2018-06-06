@@ -1,0 +1,301 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Fashionpress an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Login :: w3layouts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Fashionpress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="/stylesheets/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- Custom Theme files -->
+	<link href="/stylesheets/style.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<!--webfont-->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	<script>
+            $(function(){
+                $("#btnJoin").click(
+                    function(){
+                        if($("#id").val() == "")
+                        {
+                            alert("아이디를 꼭 입력 하세요");
+                            $("#id").focus();
+                            return;
+                        }
+                        if($("#passwd").val() == "")
+                        {
+                            alert("비밀번호를 꼭 입력 하세요");
+                            $("#passwd").focus();
+                            return;
+						}
+						if($("#passwd").val() !== $("#conf_password").val())
+                        {
+                            alert("비밀번호를 꼭 입력 하세요");
+                            $("#password").focus();
+                            return;
+                        }
+                        if($("#name").val() =="")
+                        {
+                            alert("이름을 꼭 입력 하세요");
+                            $("#name").focus();
+                            return;
+                        }
+                        if($("#email").val() =="")
+                        {
+                            alert("이메일을 꼭 입력 하세요");
+                            $("#email").focus();
+                            return;
+                        }
+                        if($("#tel2").val() =="")
+                        {
+                            alert("전화번호 두번째 자리를 확인해 주세요");
+                            $("#tel2").focus();
+                            return;
+                        }
+                        if($("#tel3").val() =="")
+                        {
+                            alert("전화번호 세번째 자리를 확인해 주세요");
+                            $("#tel3").focus();
+                            return;
+                        }
+
+                        var tel = $("#tel1").val() + '-' + $("#tel2").val() + '-' + $("#tel3").val();
+                        $("#tel").val(tel);
+
+                        if($("#address").val() =="")
+                        {
+                            alert("주소를 꼭 입력 하세요");
+                            $("#address").focus();
+                            return;
+						}
+						if($("#gender").val() =="")
+                        {
+                            alert("성별을 꼭 입력 하세요");
+                            $("#gender").focus();
+                            return;
+                        }
+                        if($("#birth").val() =="")
+                        {
+                            alert("생일을 꼭 입력 하세요");
+                            $("#birth").focus();
+                            return;
+                        }
+                        if($("#birth").val().length !== 8)
+                        {
+                            alert("생일은 8글자로 입력해 주세요");
+                            $("#birth").focus();
+                            return;
+                        }
+                        if(isNaN($("#birth").val()))
+                        {
+                            alert("아이디를 꼭 입력 하세요");
+                            $("#birth").focus();
+                            return;
+                        }
+                        $("#register").submit();
+                        
+                    }
+                );
+            });
+        </script>
+</head>
+<body>
+<div class="header">
+	<div class="header_top">
+		<div class="container">
+			<div class="logo">
+				<a href="/board/index"><img src="/images/logo.png" alt=""/></a>
+			</div>
+			<ul class="shopping_grid">
+			      <a href="#"><li>Join</li></a>
+			      <a href="/board/login"><li>Sign In</li></a>
+			      <a href="#"><li><span class="m_1">Shopping Bag</span>&nbsp;&nbsp;(0) &nbsp;<img src="/images/bag.png" alt=""/></li></a>
+			      <div class="clearfix"> </div>
+			</ul>
+		    <div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="h_menu4"><!-- start h_menu4 -->
+		<div class="container">
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li><a href="/board/index" data-hover="Home">Home</a></li>
+					<li><a href="about.html" data-hover="About Us">About Us</a></li>
+					<li><a href="careers.html" data-hover="Careers">Careers</a></li>
+					<li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
+					<li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
+					<li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
+					<li><a href="wishlist.html" data-hover="Wish List">Wish List</a></li>
+				 </ul>
+				 <script type="text/javascript" src="/js/nav.js"></script>
+	      </div><!-- end h_menu4 -->
+     </div>
+</div>
+
+<div class="column_center">
+  <div class="container">
+	<div class="search">
+	  <div class="stay">Search Product</div>
+	  <div class="stay_right">
+		  <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+		  <input type="submit" value="">
+	  </div>
+	  <div class="clearfix"> </div>
+	</div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+<!------------------------------------------------ ↑여기까지 공통부분 -------------------------------------------------------->
+
+
+<div class="about">
+  <div class="container">
+      <div class="register">
+		  	<form id="register" action ="#" method="post"> 
+				<div class="register-top-grid">
+					<h3>LOGIN INFORMATION</h3>
+					<div>
+						<span>ID<label>*</label></span>
+						<input type = "text" name = "id" id ="id" size = "12" maxLength ="12">
+					</div>
+	
+					<div>
+						<span>Password<label>*</label></span>
+						<input type="password" name ="passwd" id ="passwd" size ="12" maxLength ="12">
+					</div>
+					
+					<div>
+						<span>Confirm Password<label>*</label></span>
+						<input type="password" name ="conf_passwd" id ="conf_passwd" size ="12" maxLength ="12">
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+
+				<div class="clearfix"> </div>
+
+				<div class="register-bottom-grid">
+					<h3>PERSONAL INFORMATION</h3>
+					<div>
+						<span>Name<label>*</label></span>
+						<input type = "text" name = "name" id ="name" size = "10" maxLength ="10"> 
+					</div>
+					
+					<div>
+						<span>Email<label>*</label></span>
+						<input type = "text" name = "email" id ="email" size = "30" maxLength ="30"> 
+					</div>
+
+					<div>
+						<span>Address<label>*</label></span>
+						<input type = "text" name = "address" id ="address" size = "30" maxLength ="50">
+					</div>
+						
+					<div style = "padding-bottom: 1em">
+						<span>Phone Number<label>*</label></span>
+						<input type = "hidden" name = "tel" id ="tel">
+                        <select style = "height: 40px; width: 20%" name ="tel1" id ="tel1">
+                            <option value ="010">010</option>
+                            <option value ="010">011</option>
+                            <option value ="010">016</option>
+                            <option value ="010">017</option>
+                            <option value ="010">018</option>
+                            <option value ="010">019</option>
+                        </select>
+                        -
+                        <input type = "text" style = "width:20%" name = "tel2" id ="tel2" size = "4" maxLength ="4">
+                        -
+                        <input type = "text" style = "width:20%" name = "tel3" id ="tel3" size = "4" maxLength ="4"> 
+					</div>
+
+					<div style = "padding-bottom: 1em">
+						<span>Gender<label>*</label></span>
+						<input type = "radio" name = "gender" id = "gender" value ="남"> 남
+						<input type = "radio" name = "gender" id = "gender" value ="여"> 여 
+					</div>
+
+					<div>
+						<span>Birth<label>*</label></span>
+						<input type = "text" name = "birth" id ="birth" size = "8" maxLength ="8">*YYYYMMDD
+					</div>
+
+
+					<div class="clearfix"> </div>
+					<a class="news-letter" href="#">
+						<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
+					</a>
+				</div>
+			
+
+				<div class="clearfix"> </div>
+				<div class="login-right">
+					<input type = "submit"  id="btnJoin" value="submit">
+					<div class="clearfix"> </div>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!------------------------------------------------ ↓여기부터 공통부분-------------------------------------------------------->
+<div class="footer_bg">
+</div>
+<div class="footer">
+	<div class="container">
+		<div class="col-md-3 f_grid1">
+			<h3>About</h3>
+			<a href="#"><img src="/images/logo.png" alt=""/></a>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+		</div>
+		<div class="col-md-3 f_grid1 f_grid2">
+			<h3>Follow Us</h3>
+			<ul class="social">
+				<li><a href=""> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+			    <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+				<li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+				<li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+			</ul>
+		</div>
+		<div class="col-md-6 f_grid3">
+			<h3>Contact Info</h3>
+			<ul class="list">
+				<li><p>Phone : 1.800.254.5487</p></li>
+				<li><p>Fax : 1.800.254.2548</p></li>
+				<li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
+			</ul>
+			<ul class="list1">
+				<li><p>Aliquam augue a bibendum ipsum diam, semper porttitor libero elit egestas gravida, ut quam, nunc taciti</p></li>
+			</ul>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="footer_bottom">
+       	<div class="container">
+       		<div class="cssmenu">
+				<ul>
+					<li class="active"><a href="login.html">Privacy Policy</a></li> .
+					<li><a href="checkout.html">Terms of Service</a></li> .
+					<li><a href="checkout.html">Creative Rights Policy</a></li> .
+					<li><a href="login.html">Contact Us</a></li> .
+					<li><a href="register.html">Support & FAQ</a></li>
+				</ul>
+			</div>
+			<div class="copy">
+			    <p>&copy;  2015 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+		    </div>
+		    <div class="clearfix"> </div>
+       	</div>
+</div>
+</body>
+</html>		
