@@ -21,6 +21,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--webfont-->
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	
+		<script>
+			$(function(){
+				$("#sign_in").click(
+					function(){
+						if($("#id").val() == "")
+						{
+							alert("아이디를 꼭 입력 하세요");
+							$("#id").focus();
+							return;
+						}
+						if($("#passwd").val() == "")
+						{
+							alert("비밀번호를 꼭 입력 하세요");
+							$("#passwd").focus();
+							return;
+						}
+						$("#login").submit();
+					}
+				);
+			});
+		</script>
+
 	</head>
 	
 	<body>
@@ -69,8 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="clearfix"> </div>
 		</div>
 		</div>
-
-		<!------------------------------------------------ ↑여기까지 공통부분 -------------------------------------------------------->
+<!------------------------------------------------ ↑여기까지 공통부분 -------------------------------------------------------->
 
 		<div class="about">
 			<div class="container">
@@ -84,19 +106,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-md-6 login-right">
 						<h3>REGISTERED CUSTOMERS</h3>
 						<p>If you have an account with us, please log in.</p>
-						<form>
+						<form id = "login" action = "#" method = "POST">
 							<div>
-								<span>Email Address<label>*</label></span>
-								<input type="text"> 
+								<span>ID<label>*</label></span>
+								<input type = "text" name = "id" id ="id" size = "12" maxLength ="12">
 							</div>
 
-							<div>
+							<div class ="register-top-grid">
 								<span>Password<label>*</label></span>
-								<input type="text"> 
-							</div>
-
+								<input type="password" name ="passwd" id ="passwd" size ="12" maxLength ="12">
+							</div>	
+		
+							<div type='hidden'></div>
+		
 							<a class="forgot" href="#">Forgot Your Password?</a>
-							<input type="submit" value="Login">
+							<input class ='acount-btn' type ="button" id = "sign_in" value="Login">
 						</form>
 					</div>	
 
@@ -106,48 +130,61 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 
 
-		<!------------------------------------------------ ↓여기부터 공통부분-------------------------------------------------------->
-		
-<div class="footer_bg">
-</div>
-<div class="footer">
-   <div class="container">
-   
-      <div class="col-md-3 f_grid1 f_grid2">
-         <h3>Follow Us</h3>
-         <ul class="social">
-            <li><a href="https://www.facebook.com/%EC%86%8C%EA%B3%B5%EC%87%BC%ED%95%91%EB%AA%B0-191123228381309/"> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
-             <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
-            <li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
-            <li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
-         </ul>
-      </div>
-      <div class="col-md-6 f_grid3">
-         <h3>Contact Info</h3>
-         <ul class="list">
-            <li><p>Phone : 1.800.254.5487</p></li>
-            <li><p>Fax : 1.800.254.2548</p></li>
-            <li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
-         </ul>
-         
-         <div class="clearfix"> </div>
-      </div>
-   </div>
-</div>
-<div class="footer_bottom">
-          <div class="container">
-             <div class="cssmenu">
-            <ul>
-               <li class="active"><a href="login.html">Privacy Policy</a></li> .
-               <li><a href="checkout.html">Terms of Service</a></li> .
-               <li><a href="checkout.html">Creative Rights Policy</a></li> .
-               <li><a href="login.html">Contact Us</a></li> .
-               <li><a href="register.html">Support & FAQ</a></li>
-            </ul>
-         </div>
-        
-          <div class="clearfix"> </div>
-          </div>
-</div>
-</body>
-</html>      
+<!------------------------------------------------ ↓여기부터 공통부분-------------------------------------------------------->
+		<div class="footer_bg">
+		</div>
+
+		<div class="footer">
+			<div class="container">
+					<div class="col-md-3 f_grid1">
+						<h3>About</h3>
+						<a href="#"><img src="/images/logo.png" alt=""/></a>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+					</div>
+
+					<div class="col-md-3 f_grid1 f_grid2">
+						<h3>Follow Us</h3>
+						<ul class="social">
+							<li><a href=""> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+							<li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+							<li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+							<li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-6 f_grid3">
+						<h3>Contact Info</h3>
+						<ul class="list">
+							<li><p>Phone : 1.800.254.5487</p></li>
+							<li><p>Fax : 1.800.254.2548</p></li>
+							<li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
+						</ul>
+						<ul class="list1">
+							<li><p>Aliquam augue a bibendum ipsum diam, semper porttitor libero elit egestas gravida, ut quam, nunc taciti</p></li>
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="container">
+				<div class="cssmenu">
+					<ul>
+						<li class="active"><a href="login.html">Privacy Policy</a></li> .
+						<li><a href="checkout.html">Terms of Service</a></li> .
+						<li><a href="checkout.html">Creative Rights Policy</a></li> .
+						<li><a href="login.html">Contact Us</a></li> .
+						<li><a href="register.html">Support & FAQ</a></li>
+					</ul>
+				</div>
+				
+				<div class="copy">
+					<p>&copy;  2015 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</body>
+</html>		
+
