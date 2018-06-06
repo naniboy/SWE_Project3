@@ -37,7 +37,7 @@ router.get('/sell/:item_name', function(req, res, next) {
 router.get('/index', function(req, res, next) {
   pool.getConnection(function(err, connection){
  
-   connection.query('SELECT * From product', function(err,rows){
+   connection.query('SELECT * From product ORDER BY sell DESC', function(err,rows){
      if(err) console.error("err: "+err);
      console.log("rows : "+ JSON.stringify(rows));
  
