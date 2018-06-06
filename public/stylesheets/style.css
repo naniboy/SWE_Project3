@@ -1494,6 +1494,14 @@ i.mail{
 	font: 300 16px/16px Lato, sans-serif;
 }
 /*--register--*/
+.product h3 {
+	color:#df1f26;
+	font-size: 1.5em;
+	padding-bottom: 8px;
+	margin: 0;
+	font-weight:600;
+}
+
 .register-top-grid h3, .register-bottom-grid h3 {
 	color:#df1f26;
 	font-size: 1em;
@@ -1503,24 +1511,23 @@ i.mail{
 }
 .register-top-grid div, .register-bottom-grid div {
 	width: 48%;
-	float: bottom;
+	float: left;
 	margin: 10px 0;
 }
 .register-top-grid span, .register-bottom-grid span {
-	color:#000;
+	color:#999;
 	font: 300 14px/25px Lato, sans-serif;
 	padding-bottom: 0.2em;
 	display: block;
 	text-transform: uppercase;
 }
-.register-top-grid input[type="text"],.register-top-grid input[type="id"], .register-top-grid input[type="password"], .register-bottom-grid input[type="text"] {
+.register-top-grid input[type="text"], .register-bottom-grid input[type="text"], {
 	border: 1px solid #EEE;
 	outline-color:#FF5B36;
 	width: 96%;
 	font-size: 1em;
 	padding: 0.5em;
 }
-
 .checkbox {
 	margin-bottom: 4px;
 	padding-left: 27px;
@@ -1632,7 +1639,6 @@ div.register-bottom-grid {
 .acount-btn {
 	background:#df1f26;
 	color: #FFF;
-	border: #fff;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	transition: 0.5s all;
@@ -1643,10 +1649,9 @@ div.register-bottom-grid {
 	text-transform: uppercase;
 }
 .acount-btn:hover, .login-right input[type="submit"]:hover{
-	background:#fff;
+	background:#000;
 	text-decoration:none;
-	border: solid #df1f26 2px;
-	color:#df1f26;
+	color:#fff;
 }
 .login-right form {
 	padding: 1em 0;
@@ -1683,7 +1688,7 @@ div.register-bottom-grid {
 	outline:none;
 }
 .login-right input[type="submit"]:hover{
-	background:#fff;
+	background:#000;
 }
 a.forgot {
 	font: 300 14px/25px Lato, sans-serif;
@@ -1933,6 +1938,9 @@ ul.shopping_grid li {
 	top: 30%;
 }
 .stay {
+	font: 800 12px/13px 'Lato', sans-serif;
+}
+#review {
 	font: 800 12px/13px 'Lato', sans-serif;
 }
 .stay_right {
