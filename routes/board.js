@@ -10,9 +10,6 @@ var pool = mysql.createPool({
 });
 
 
-
-
-
 /* GET home page. */
 
 router.get('/index', function(req, res, next) {
@@ -78,12 +75,21 @@ router.get('/register',(req,res,next)=>{
 });
 
 router.post('/register',function(req,res,next){
-  console.log('req.body: '+JSON.stringify(req.body));
-  var sql ;
+  var id = req.body.id;
+  var pw = req.body.passwd;
+  var email = req.body.email;
+  var name = req.body.name;
+  var addr = req.body.address;
+  var phone = req.body.tel;
+  var gend = req.body.gender;
+  var birth = req.body.birth;
+  var data = [id,pw,email,name,addr,phone,gend,birth];
+  var sql = "insert into info_person (id,pw,email,name,addr,phone,gend,birth) value (?,?,?,?,?,?,?,?);";
+  
+  console.log('data: '+ data);
   pool.getConnection(function(err,connection){
-    connection.query(sql,function(err,rows){
-      if(err) console.error("err: "+err);
-      res.render('register');
+    connection.query(sql,data,function(err,rows){
+      res.redirect('login');
       connection.release();
     });
   });

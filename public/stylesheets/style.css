@@ -1632,6 +1632,7 @@ div.register-bottom-grid {
 .acount-btn {
 	background:#df1f26;
 	color: #FFF;
+	border: #fff;
 	font-size: 0.8em;
 	padding: 0.7em 1.2em;
 	transition: 0.5s all;
