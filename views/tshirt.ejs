@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul class="shopping_grid">
 			      <a href="#"><li>Join</li></a>
 			      <a href="login.html"><li>Sign In</li></a>
-			      <a href="#"><li><span class="m_1">Shopping Bag</span>&nbsp;&nbsp;(0) &nbsp;<img src="/images/bag.png" alt=""/></li></a>
+			     
 			      <div class="clearfix"> </div>
 			</ul>
 		    <div class="clearfix"> </div>
@@ -78,12 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
 					<li class="active"><a href="/board/index" data-hover="Home">Home</a></li>
-					<li><a href="about.html" data-hover="About Us">About Us</a></li>
-					<li><a href="careers.html" data-hover="Careers">Careers</a></li>
-					<li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
-					<li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
-					<li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
-					<li><a href="wishlist.html" data-hover="Wish List">Wish List</a></li>
+				
 				 </ul>
 				 <script type="text/javascript" src="/js/nav.js"></script>
 	      </div><!-- end h_menu4 -->
@@ -251,7 +246,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														{	 var data=db[i].star;
 													 %>
 														<div class="c-shop-item__details"> 
-															<h3 class="c-shop-item__title"><%=db[i].item_name%></h3> 
+															<h3 class="c-shop-item__title"><%=db[i].user_name%></h3> 
 															<p class="c-shop-item__description"> <%=db[i].content%> </p> 
 															
 															<%
@@ -263,82 +258,91 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														 <%
 														}
 														%>
-															
+												
 															
 														</div>
 		
-													
+														<div class="clearfix"> </div>
 														<%
 													}
 													%>
 													
+													
+													<br>
+													<h2>리뷰 남기기</h2>
+													
+												 <form id="review" action="#" method="post">
+													 <select name="cnt_star" id="cnt_star" style="height:28px; margin-bottom: 5px">
+														<option value="1" name="cnt_star" id="cnt_star">☆</option>
+														<option value="2" name="cnt_star" id="cnt_star">☆☆</option>
+														<option value="3" name="cnt_star" id="cnt_star">☆☆☆</option>
+														<option value="4" name="cnt_star" id="cnt_star">☆☆☆☆</option>
+														<option value="5" name="cnt_star" id="cnt_star">☆☆☆☆☆</option>
+													 </select><br>
+													<input type="text" value="cmt" name="cmt" id="cmt" style="width:80%; height:100px">
+													<a href="#"><button type="submit" style="padding: 5px; margin: 3px; width:15%; height:100px"><font size="5px">글쓰기</font></button>
+												 </form>
+											 </a>
 													</div>
-
-
-
-
-										</a></li>
+			 
+			 
+			 
+			 
+										   </a></li>
+										  
+										  </ul>
+										  </div>
+									   </div>
 									  
-									  </ul>
-							        </div>
-							     </div>
-							    
-							 </div>
-					      </div>
-			  </div>
-		
-        </div>
-      </div>
-	</div>
-</div>
+								   </div>
+								  </div>
+						</div>
+				   
+					 </div>
+				   </div>
+				</div>
+			 </div>
+			 
 <div class="footer_bg">
 </div>
 <div class="footer">
-	<div class="container">
-		<div class="col-md-3 f_grid1">
-			<h3>About</h3>
-			<a href="#"><img src="/images/logo.png" alt=""/></a>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-		</div>
-		<div class="col-md-3 f_grid1 f_grid2">
-			<h3>Follow Us</h3>
-			<ul class="social">
-				<li><a href=""> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
-			    <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
-				<li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
-				<li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
-			</ul>
-		</div>
-		<div class="col-md-6 f_grid3">
-			<h3>Contact Info</h3>
-			<ul class="list">
-				<li><p>Phone : 1.800.254.5487</p></li>
-				<li><p>Fax : 1.800.254.2548</p></li>
-				<li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
-			</ul>
-			<ul class="list1">
-				<li><p>Aliquam augue a bibendum ipsum diam, semper porttitor libero elit egestas gravida, ut quam, nunc taciti</p></li>
-			</ul>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
+   <div class="container">
+   
+      <div class="col-md-3 f_grid1 f_grid2">
+         <h3>Follow Us</h3>
+         <ul class="social">
+            <li><a href="https://www.facebook.com/%EC%86%8C%EA%B3%B5%EC%87%BC%ED%95%91%EB%AA%B0-191123228381309/"> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+             <li><a href=""><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+            <li><a href=""><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+            <li><a href=""><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+         </ul>
+      </div>
+      <div class="col-md-6 f_grid3">
+         <h3>Contact Info</h3>
+         <ul class="list">
+            <li><p>Phone : 1.800.254.5487</p></li>
+            <li><p>Fax : 1.800.254.2548</p></li>
+            <li><p>Email : <a href="mailto:info(at)fashionpress.com"> info(at)fashionpress.com</a></p></li>
+         </ul>
+         
+         <div class="clearfix"> </div>
+      </div>
+   </div>
 </div>
 <div class="footer_bottom">
-       	<div class="container">
-       		<div class="cssmenu">
-				<ul>
-					<li class="active"><a href="login.html">Privacy Policy</a></li> .
-					<li><a href="checkout.html">Terms of Service</a></li> .
-					<li><a href="checkout.html">Creative Rights Policy</a></li> .
-					<li><a href="login.html">Contact Us</a></li> .
-					<li><a href="register.html">Support & FAQ</a></li>
-				</ul>
-			</div>
-			<div class="copy">
-			    <p>&copy;  2015 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
-		    </div>
-		    <div class="clearfix"> </div>
-       	</div>
+          <div class="container">
+             <div class="cssmenu">
+            <ul>
+               <li class="active"><a href="login.html">Privacy Policy</a></li> .
+               <li><a href="checkout.html">Terms of Service</a></li> .
+               <li><a href="checkout.html">Creative Rights Policy</a></li> .
+               <li><a href="login.html">Contact Us</a></li> .
+               <li><a href="register.html">Support & FAQ</a></li>
+            </ul>
+         </div>
+        
+          <div class="clearfix"> </div>
+          </div>
 </div>
 </body>
-</html>
+</html>      

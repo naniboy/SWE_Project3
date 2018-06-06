@@ -79,61 +79,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               </div><!-- end h_menu4 -->
          </div>
     </div>
-    <div class="column_center">
-      <div class="container">
-        <div class="search">
-          <div class="stay">Search Product</div>
-          <div class="stay_right">
-              <input type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-              <input type="submit" value="">
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
+   <form action="/board/outer_menu" method="post" onsubmit="return onWriteSubmit()">
+    <table border=1>
+        <tr>
+            <td>물품이름</td>
+            <td><input type="text" name="item_name" id="item_name" required/></td>
 
-
-<div class="about">
-    <div class="container">
-    <div class="product">
-            <h3>상품 정보</h3><br>
-            <table style="border:1px; width: 96%; font-size: 1em; text-align:center; padding:50px" summary="">
-            <thead >
-            <tr >
-                <td style="padding: 20px"><strong>이미지</strong></td>
-                <td style="padding: 20px" ><strong>상품정보</strong></td>
-                <td style="padding: 20px"><strong>금액</strong></td>
-                <td style="padding: 20px"><strong>수량</strong></td>
-                <td style="padding: 20px"><strong>배송비</strong></td>
-                <td style="padding: 20px"><strong>합계</strong></td>
-            </tr>
-            
-            </thead>
-            
-            
-            <tbody class="xans-element- xans-order xans-order-normallist">
-            <tr class="xans-record-">
-                <td class="thumb"><a href="/board/<%=rows[0].item_type%>_menu/<%=rows[0].item_name%>"><img src="/images/<%=rows[0].item_name%>.jpg" alt="" style="width:200px; height:200px;"/></a></td>
-                <td class="product">
-                    <a href="/board/<%=rows[0].item_type%>_menu/<%=rows[0].item_name%>"><strong><%=rows[0].item_name%></strong></a>
-                    <div class="option ">[<%=rows[0].color%> / <%=select_size%>]</div>
-                </td>
-                <td class="don"><%=rows[0].price%>원</td>
-                <td class="quantity">1</td>
-                <td class="delivery">2500원</td>
-                <td class="total"><strong><%=rows[0].price + 2500%>원</strong><div class="displaynone"></div></td>
-            </tr>
-
-            </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
-
+        </tr>
+        <tr>
+                <td>물품종류</td>
+                <select name="select_size">
+						<option value="small">S</option>
+						<option value="midium">M</option>
+						<option value="large">L</option>
+					</select>
     
-    <div class="about">
+            </tr>
+
+ </table>
+ </form>
+
+ <div class="about">
         <div class="container">
             <div class="register">
                 <form> 
@@ -180,7 +146,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </form>
                 <div class="clearfix"> </div>
                 <div class="register-but">
-                    <form action="/board/sell/<%=rows[0].item_name%>" method="get" >
+                    <form action="/board/index" method="get" >
                         
                         <input type="submit" value="결제하기" onclick="alert('결제됐쥬?')" />
                         
@@ -190,8 +156,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
-
- 
 <div class="footer_bg">
 </div>
 <div class="footer">

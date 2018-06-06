@@ -6,7 +6,7 @@ var pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   database: 'test',
-  password: 'als213546'
+  password: '940306'
 });
 
 router.get('/sell/:item_name', function(req, res, next) {
@@ -29,7 +29,7 @@ router.get('/sell/:item_name', function(req, res, next) {
 router.get('/index', function(req, res, next) {
   pool.getConnection(function(err, connection){
  
-   connection.query('SELECT * From board', function(err,rows){
+   connection.query('SELECT * From product', function(err,rows){
      if(err) console.error("err: "+err);
      console.log("rows : "+ JSON.stringify(rows));
  
@@ -40,7 +40,23 @@ router.get('/index', function(req, res, next) {
   });
   
  });
+ router.post('/tshirt_menu/:item_name', function(req, res, next){
+  var star = req.body.cnt_star; //별 개수
+  var comment = req.body.cmt;   //후기
+  var item_name = req.params.item_name; //제품명
+  var sql = [item_name, '정의헌', comment, star];
 
+  pool.getConnection(function(err, connection){
+    connection.query('INSERT INTO review (item_name, user_name, content, star) VALUE (?, ?, ?, ?)', sql, function(err,rows){
+      if(err) console.error("err: "+err);
+      connection.release();      
+      res.redirect('#');
+
+    });
+  });
+  
+
+});
 
  router.get('/tshirt_menu/:item_name',function(req,res,next){
 
@@ -324,6 +340,28 @@ router.get('/buy/:item_name',function(req,res,next){
     });
    });
   });
+
+  router.get('/goods/:item_type',function(req,res,next){
+
+    var item_type = req.params.item_type;
+    var select_size = req.query.select_size;
+  
+    pool.getConnection(function(err, connection){
+   
+       var sql="select item_name,item_type,price,color,spec from product where item_name=? ";
+  // list js 만들 떄 사용하는건데 이렇게 해도 되는건가.
+  
+      connection.query(sql,[item_type], function(err,rows){
+        if(err) console.error("err: "+err);
+        
+    
+        res.render('goods', { title: 'test',rows: rows, select_size: select_size });//여기에 함부로 추가면 좇된다. 이대로 형식을 둡니다. 
+  
+        connection.release();
+    
+      });
+     });
+    });
 
 router.get('/tshirt_menu',function(req,res,next){
     pool.getConnection(function(err, connection){
